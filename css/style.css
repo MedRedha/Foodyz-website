@@ -23,6 +23,98 @@ body {
   background: #fff;
 }
 
+p {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+}
+
+.word {
+  position: absolute;
+  align-items: center;
+  font-size: 20px;
+  opacity: 0;
+}
+
+.center {
+  /* display: inline-flex; */
+  background-color: red;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  position: center;
+  align-items: center;
+  opacity: 100%;
+}
+
+.letter {
+  display: inline-block;
+  position: relative;
+  float: left;
+  transform: translateZ(25px);
+  transform-origin: 50% 50% 25px;
+}
+
+.letter.out {
+  transform: rotateX(90deg);
+  transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.letter.behind {
+  transform: rotateX(-90deg);
+}
+
+.letter.in {
+  transform: rotateX(0deg);
+  transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.wisteria {
+  color: #ce24b7;
+}
+
+.belize {
+  color: #2980b9;
+}
+
+.pomegranate {
+  color: #c0392b;
+}
+
+.green {
+  color: #0be2b7;
+}
+
+.midnight {
+  color: #ee7300;
+}
+
+p1 {
+  position: relative;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: 2em;
+  letter-spacing: 4px;
+  overflow: hidden;
+  background: linear-gradient(90deg, #000, #fff, #000);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animate 5s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+
+@keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
+}
+
 #page {
   position: relative;
   overflow-x: hidden;
@@ -32,6 +124,7 @@ body {
   -o-transition: 0.5s;
   transition: 0.5s;
 }
+
 .offcanvas #page {
   overflow: hidden;
   position: absolute;
@@ -65,7 +158,10 @@ a:focus {
 }
 
 p {
-  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: red;
 }
 
 h1,
@@ -150,13 +246,14 @@ figure {
   }
 }
 .fh5co-nav #fh5co-logo {
-  font-size: 20px;
+  font-size: 40px;
   margin: 20px 0 0 0;
   padding: 0;
   line-height: 40px;
   font-family: "Space Mono", Arial, serif;
   font-weight: bold;
   text-transform: uppercase;
+  color: rgb(167, 167, 167);
 }
 .fh5co-nav a {
   color: #fff;
