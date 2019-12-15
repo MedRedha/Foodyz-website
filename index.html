@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>
-      Soon &mdash; 100% Free Fully Responsive HTML5 Template by FREEHTML5.co
+      Foodyz
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
@@ -58,6 +58,8 @@
     <link rel="stylesheet" href="css/bootstrap.css" />
     <!-- Theme style  -->
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="css/text.css" />
 
     <!-- Modernizr JS -->
     <script src="js/modernizr-2.6.2.min.js"></script>
@@ -76,24 +78,33 @@
             <div class="col-md-12 text-center">
               <div class="display-t js-fullheight">
                 <div class="display-tc animate-box">
-                  <nav class="fh5co-nav" role="navigation">
-                    <div id="fh5co-logo">
-                      <a href="index.html">FOODYZ<strong></strong></a>
+                  <div>
+                    <h1>
+                    <p>
+                      <span class="word white">FOODYZ</span>
+                      <span class="word wisteria">TASTY</span>
+                      <span class="word belize">INTERACTIVE</span>
+                      <span class="word pomegranate">FANCY</span>
+                      <span class="word green">BEAUTIFUL</span>
+                      <span class="word midnight">CHEAP</span>
+                    </p>  
+                    </h1>                  
+                  </div>
+                  <div>
+                    </br></br>
+                    <div class="type-js headline">
+                      <h1 class="text-js">We Are Coming Soon...</h1>                      
                     </div>
-                  </nav>
-                  <h1>We Are Coming Soon!</h1>
+                  </div>                
                   <canvas id="pizza"></canvas>
-                  <h2>
-                    Made with love by
-                    <a href="https://github.com/ElChikoos" target="_blank"
-                      >The WUUD Team</a
-                    >
+                  <h2>                  
+                    <div class="text1"></div>
                   </h2>
+
                   <div class="simply-countdown simply-countdown-one"></div>
                   <div class="row">
                     <div class="col-md-12 desc">
-                      <h2>
-                        Our webiste is opening soon. <br />
+                      <h2>                        
                         Please register to notify you when it's ready!
                       </h2>
                       <form class="form-inline" id="fh5co-header-subscribe">
@@ -113,7 +124,7 @@
                       </form>
                       <ul class="fh5co-social-icons">
                         <li>
-                          <a href="https://github.com/ElChikoos"
+                          <a href="https://github.com/TeamWuuD"
                             ><i class="icon-github-with-circle"></i
                           ></a>
                         </li>
@@ -140,10 +151,38 @@
             </div>
           </div>
         </div>
-        <div
-          class="bg-cover js-fullheight"
-          style="background-image:url(images/img_bg_1.jpeg);"
-        ></div>
+        <div class="bg-cover js-fullheight" style="position: relative;">
+          <img
+            class="mySlides w3-animate-fading"
+            src="images/img_bg_2.jpeg"
+            style="height: 939px; width: 100%;"
+          />
+          <img
+            class="mySlides w3-animate-fading"
+            src="images/img_bg_1.jpeg"
+            style="height: 939px;"
+          />
+          <img
+            class="mySlides w3-animate-fading"
+            src="images/img_bg_3.jpeg"
+            style="height: 939px;"
+          />
+          <img
+            class="mySlides w3-animate-fading"
+            src="images/img_bg_4.jpeg"
+            style="height: 939px; width: 100%;"
+          />
+          <img
+            class="mySlides w3-animate-fading"
+            src="images/img_bg_5.jpeg"
+            style="height: 939px;"
+          />
+          <img
+            class="mySlides w3-animate-fading"
+            src="images/img_bg_6.jpeg"
+            style="height: 939px;"
+          />
+        </div>
       </div>
     </div>
 
@@ -165,15 +204,35 @@
     <!-- Main -->
     <script src="js/main.js"></script>
     <script src="js/pizza.js"></script>
+    <script src="js/typing.js"></script>
+    <script src="js/scramble.js"></script>
+    <script src="js/rotating.js"></script>
 
     <script>
+      var myIndex = 0;
+      carousel();
+
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) {
+          myIndex = 1;
+        }
+        x[myIndex - 1].style.display = "block";
+        setTimeout(carousel, 4500);
+      }
+
       var d = new Date(new Date().getTime() + 1000 * 120 * 120 * 2000);
 
       // default example
       simplyCountdown(".simply-countdown-one", {
-        year: d.getFullYear(),
-        month: d.getMonth() + 1,
-        day: d.getDate()
+        year: 2020,
+        month: 0.5 + 1,
+        day: 15
       });
 
       //jQuery example
